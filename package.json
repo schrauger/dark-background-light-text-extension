@@ -5,8 +5,8 @@
     "firefox": ">=38.0",
     "fennec": ">=38.0"
   },
-  "author": "Mikhail Khvoinitsky <dark-bg-light-text-mozilla@khvoinitsky.org>",
-  "title": "Dark Background and Light Text",
+  "author": "sgs Mikhail Khvoinitsky <dark-bg-light-text-mozilla@khvoinitsky.org>",
+  "title": "sgs Dark Background and Light Text",
   "version": "0.5.6",
   "permissions": {
     "private-browsing": true,
@@ -21,7 +21,7 @@
     }
   ],
   "main": "lib/index.js",
-  "id": "jid1-QoFqdK4qzUfGWQ@jetpack",
-  "name": "dark-background-light-text",
+  "id": "sgs-jid1-QoFqdK4qzUfGWQ@jetpack",
+  "name": "sgs-dark-background-light-text",
   "icon": "icon.png"
 }

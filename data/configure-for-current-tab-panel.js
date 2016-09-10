@@ -7,6 +7,7 @@ self.port.on('init', function(data){
     var isPrivate = data["isPrivate"];
     var isTouchscreen = data['isTouchscreen'];
     var enabled = data['enabled'];
+    var scheduleEnabled = data['scheduleEnabled'];
     var body = document.querySelector('body');
     if (isTouchscreen)
         body.setAttribute('class', 'touchscreen');
@@ -33,6 +34,7 @@ self.port.on('init', function(data){
         self.port.emit('enabled-change', checkbox.checked);
     };
     checkbox_label.appendChild(checkbox);
+
     body.appendChild(checkbox_label);
 
     body.appendChild(document.createElement('hr'));
@@ -47,6 +49,21 @@ self.port.on('init', function(data){
         container.appendChild(overlay);
     }
 
+    // Schedule checkbox
+    var schedule_checkbox_label = document.createElement('label');
+    schedule_checkbox_label.setAttribute('class', 'schedule_enabled_label');
+    schedule_checkbox_label.textContent = 'Schedule Enabled';
+    var schedule_checkbox = document.createElement('input');
+    schedule_checkbox.setAttribute('type', 'checkbox');
+    schedule_checkbox.checked = scheduleEnabled;
+    schedule_checkbox.onchange = function(){
+        self.port.emit('schedule-enabled-change', schedule_checkbox.checked);
+    };
+
+    schedule_checkbox_label.appendChild(schedule_checkbox);
+
+    body.appendChild(schedule_checkbox_label);
+    
     var title = document.createElement('div');
     title.textContent = 'Dark Background and Light Text options for:';
     title.setAttribute('class', 'options_for');

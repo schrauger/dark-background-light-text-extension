@@ -46,19 +46,22 @@
         select,
         button,
         .options_for,
-        .enabled_label
+        .enabled_label,
+        .schedule_enabled_label
         {
             font-size: 1.2em;
         }
 
-        .enabled_label
+        .enabled_label,
+        .schedule_enabled_label
         {
             box-sizing: border-box;
             display: flex;
             justify-content: space-between;
             align-items: baseline;
         }
-        .touchscreen .enabled_label
+        .touchscreen .enabled_label,
+        .touchscreen .schedule_enabled_label
         {
             padding-left: 0.75em;
             padding-right: 0.75em;
@@ -114,7 +117,8 @@
         }
 
         .touchscreen li,
-        .touchscreen .enabled_label
+        .touchscreen .enabled_label,
+        .touchscreen .schedule_enabled_label
         {
             line-height: 250%;
             border-style: solid;
